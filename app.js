@@ -25,6 +25,9 @@ const itemCtrl = (function() {
 })();
 
 const UICtrl = (function() {
+    const UISelectors = {
+        itemList: '#item-list'
+    }
     return {
         populateItemList: function(items) {
             let html = '';
@@ -38,7 +41,7 @@ const UICtrl = (function() {
                 </li>`;
             });
 
-            document.querySelector('#item-list').innerHTML = html;
+            document.querySelector(UISelectors.itemList).innerHTML = html;
         }
     }
 })();
